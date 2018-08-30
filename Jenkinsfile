@@ -27,6 +27,7 @@ pipeline {
             }
             steps {
                 sh '''
+                docker stop coateds/python-microservice
                 docker run --name python-microservice -p 80:80 -d coateds/python-microservice
                 '''
             }
