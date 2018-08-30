@@ -32,7 +32,7 @@ pipeline {
                         docker stop python-microservice
                         docker rm python-microservice
                         '''
-                    }
+                    } catch (err) {}
                     '''
                     docker run --name python-microservice -p 80:80 -d coateds/python-microservice
                     '''
