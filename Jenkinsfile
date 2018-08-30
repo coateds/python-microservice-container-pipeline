@@ -21,5 +21,18 @@ pipeline {
                 }
             }
         }
+        stage('Run Docker Container') {
+            when {
+                branch 'master'
+            }
+            steps {
+                sh '''
+                docker run -p 80:80 -d coateds/python-microservice
+                '''
+            }
+        }
+
+
+        docker run -p 80:80 -d coateds/python-microservice
     }
 }
