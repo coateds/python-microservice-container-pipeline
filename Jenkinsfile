@@ -18,7 +18,6 @@ pipeline {
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
                     }
-                    app.start "coateds/python-microservice"
                 }
             }
         }
