@@ -14,7 +14,7 @@ pipeline {
             }
             steps {
                 script {
-                    app = docker.build("coateds/container-pipeline")
+                    app = docker.build("coateds/python-microservice")
                     app.inside {
                         sh 'echo $(curl localhost:8080)'
                     }
