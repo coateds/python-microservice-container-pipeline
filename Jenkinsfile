@@ -8,6 +8,7 @@ pipeline {
                 echo 'Running build automation'
             }
         }
+        // builds the new container
         stage('Build Docker Image') {
             when {
                 branch 'master'
