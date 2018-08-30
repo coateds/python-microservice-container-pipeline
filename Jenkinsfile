@@ -8,7 +8,7 @@ pipeline {
                 echo 'Running build automation'
             }
         }
-        // builds the new container
+        // builds the new container locally
         stage('Build Docker Image') {
             when {
                 branch 'master'
@@ -22,6 +22,8 @@ pipeline {
                 }
             }
         }
+
+        // stop and remove existing container in try/catch for when there is no container to remove
         stage('Run Docker Container') {
             when {
                 branch 'master'
