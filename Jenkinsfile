@@ -31,8 +31,5 @@ pipeline {
                 '''
             }
         }
-
-
-        docker run -p 80:80 -d coateds/python-microservice
     }
 }
