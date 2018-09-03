@@ -37,7 +37,7 @@ pipeline {
                         '''
                     } catch (err) {}
                     sh '''
-                    docker run --name python-microservice -p 80:80 -d -v ~:/opt/dcoate-app coateds/python-microservice
+                    docker run --name python-microservice -p 80:80 -d coateds/python-microservice
                     '''
                 }
             }
