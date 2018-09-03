@@ -13,8 +13,11 @@ This pipeline is self contained in the jenkins-docker vagrant box. Use the Pytho
 * Write a loop that performs a test
   * Simple Ping for now
 * Write a function that converts a list to an html table row
+* Work on ways to input a list (txt file) of servers/sites to ping
+  * In the Dockerfile
+  * File sharing with host
 
-## Anciallry issues
+## Ancillary issues
 Need to (fully) recover git to GitHub functionality. Adding a new file did not work from the client
 
 Install (Windows) Python on laptop
