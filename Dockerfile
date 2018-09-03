@@ -6,7 +6,8 @@ FROM yobasystems/alpine-nginx:latest
 # Set up working directory and copy files to it from GitHub
 ENV DIRPATH /opt/dcoate-app/
 WORKDIR $DIRPATH
-ADD append.py $DIRPATH
+ADD write-webpage.py $DIRPATH
+#ADD append.py $DIRPATH
 ADD mycmd.sh $DIRPATH
 
 # Copy a new web index.html page from GitHub
