@@ -11,7 +11,7 @@ ADD write-webpage.py $DIRPATH
 ADD mycmd.sh $DIRPATH
 
 # Copy a new web index.html page from GitHub
-# ADD index.html /etc/nginx/html/index.html
+ADD index.html /etc/nginx/html/index.html
 
 # Install bash and python
 RUN apk add --no-cache bash python2-dev python2 py2-pip
