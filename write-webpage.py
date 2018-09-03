@@ -5,6 +5,8 @@ htmlheader = "<html><head></head>"
 htmlbodytop = "<body>"
 htmlbodybottom = "</body></html>"
 
+htmlwhole = "<html><head></head><body>wholefile</body></html>"
+
 count = 0
 
 # This works (from append)
@@ -18,6 +20,7 @@ while True:
     count += 1
     index = open('/etc/nginx/html/index.html', 'w')
     dynamicstring = htmlheader + htmlbodytop + "<p>dynamic line" + count + "</p>" + htmlbodybottom
-    index.write(dynamicstring)
+    # index.write(dynamicstring)
+    index.write(htmlwhole)
     index.close
     time.sleep(2)    
