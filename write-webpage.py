@@ -16,15 +16,14 @@ count = 0
 #     index.close
 #     time.sleep(2)
 
-# This is my stopping point
-# I can write a whole static website out of concatenated
-# string fragments, but it will not take "count"
-# do I need to convert count to a string??
+# Write a whole static website out of concatenated
+# string fragments, "count" needs to be converted to a string
+# in this form, /etc/nginx/html/index.html needs to exist first
+# copy an empty index.html file in the Dockerfile
 while True:
     count += 1
     index = open('/etc/nginx/html/index.html', 'w')
     dynamicstring = htmlheader + htmlbodytop + "<p>dynamic line" + str(count) + "</p>" + htmlbodybottom
     index.write(dynamicstring)
-    # index.write(htmlwhole)
     index.close
     time.sleep(2)    
