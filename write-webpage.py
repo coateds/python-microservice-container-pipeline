@@ -26,4 +26,4 @@ while True:
     dynamicstring = htmlheader + htmlbodytop + "<p>dynamic line" + str(count) + "</p>" + htmlbodybottom
     index.write(dynamicstring)
     index.close
-    time.sleep(2)    
+    time.sleep(2)
