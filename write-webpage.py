@@ -23,7 +23,7 @@ count = 0
 while True:
     count += 1
     index = open('/etc/nginx/html/index.html', 'w')
-    dynamicstring = htmlheader + htmlbodytop + "<p>dynamic line</p>" + htmlbodybottom
+    dynamicstring = htmlheader + htmlbodytop + "<p>dynamic line" + str(count) + "</p>" + htmlbodybottom
     index.write(dynamicstring)
     # index.write(htmlwhole)
     index.close
